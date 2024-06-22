@@ -3,7 +3,7 @@
 This is the project aimed to demonstrate my abilities HTML, CSS and JS. I have prepared a responsive design through figma file provided
 
 # Made by Shubham Ekkaldevi
-## URL 🔴 : https://brickfolio.netlify.app/
+## URL 🔴 : https://brickfolioshubham.netlify.app/
 ## Github URL 🔴 : https://github.com/Shubhz2508/Brickfolio_Shubham
 
 
@@ -39,7 +39,7 @@ Prepared sections with following sections
 
    Open `index.html` in your preferred web browser (e.g., Chrome, Firefox) to view the web page.
 
-## For better experience use the website hosted https://brickfolio.netlify.app/
+## For better experience use the website hosted https://brickfolioshubham.netlify.app/
 
 
 

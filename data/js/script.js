@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             disableOnInteraction: false,
         },
         loop: true,
-    // Start with the first slide
     });
 });
 document.addEventListener('DOMContentLoaded', () => {

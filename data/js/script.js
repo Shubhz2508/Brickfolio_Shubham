@@ -87,9 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 $(document).ready(function() {
+    // Toggle enlarged class on image click
     $('.showcase-card-img img').click(function() {
-        var imgId = $(this).attr('data-id');
-        $(`.showcase-card-img img[data-id='${imgId}']`).toggleClass('enlarged');
+        $(this).toggleClass('enlarged');
     });
 });
 

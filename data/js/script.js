@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
     var swiper = new Swiper('.mySwiper', {
         slidesPerView: 1.01,

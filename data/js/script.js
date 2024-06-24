@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
     var swiper = new Swiper('.mySwiper', {
         slidesPerView: 1.01,
@@ -84,3 +85,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+$(document).ready(function() {
+    $('.showcase-card-img img').click(function() {
+        var imgId = $(this).attr('data-id');
+        $(`.showcase-card-img img[data-id='${imgId}']`).toggleClass('enlarged');
+    });
+});
+
+$(document).ready(function() {
+    var cards = $('.achievments-card');
+
+    $(window).on('load resize', function() {
+        if ($(window).width() < 750) {
+            cards.each(function(index) {
+                $(this).addClass('slide-in');
+            });
+        } else {
+            cards.removeClass('slide-in slide-out').css({
+                'transform': 'none',
+                'opacity': '1',
+                'pointer-events': 'auto'
+            });
+        }
+    });
+});
+

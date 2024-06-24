@@ -1,30 +1,41 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 1.01,
-        reverseDirection: true,
-        spaceBetween: 10,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-        },
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: true,
-        },
-        speed: 2500, // Speed of the continuous slide (lower is faster)
-        loop: true, // Enable continuous loop mode
-        freeMode: true, 
-        freeModeMomentum: false,
+    function initializeSwiper() {
+        if (window.innerWidth <= 767) {
+            if (!swiper) {
+                swiper = new Swiper('.mySwiper', {
+                    slidesPerView: 1.01,
+                    reverseDirection: true,
+                    spaceBetween: 10,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: true,
+                    },
+                    speed: 2500, // Speed of the continuous slide (lower is faster)
+                    loop: true, // Enable continuous loop mode
+                    freeMode: true,
+                    freeModeMomentum: false,
+                });
+            }
+        } else {
+            if (swiper) {
+                swiper.destroy(true, true);
+                swiper = null;
+            }
+        }
+    }
+
+    let swiper = null;
+    initializeSwiper();
+
+    window.addEventListener('resize', () => {
+        initializeSwiper();
     });
 });
+
 document.addEventListener('DOMContentLoaded', () => {
     const propertyTypeSelect = document.getElementById('property-type');
     const commercialOptionsContainer = document.getElementById('commercial-options');

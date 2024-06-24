@@ -388,10 +388,10 @@ h1 {
 .showcase-card {
     width: 254px;
     height: 287px;
-    padding: 15px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 0.5rem;
+    margin: 1.5rem;
     transition: transform 0.3s ease ; /* Added transition for smooth hover effect */
     cursor: pointer;
 }
@@ -565,9 +565,8 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     margin: 0; /* Reset margin to remove any default margin */
-    padding: 0; 
+    padding: 0;
 }
-
 
 .achievments-card {
     width: 335px;
@@ -581,7 +580,6 @@ h1 {
     border-radius: 45px;
     transition: transform 0.3s ease; /* Added transition for smooth hover effect */
     cursor: pointer;
-    animation: slideRightToLeft 0.5s ease forwards;
 }
 
 .achievments-card img {
@@ -596,9 +594,26 @@ h1 {
     transform: translateY(-5px); /* Move card slightly upward on hover */
 }
 
-@keyframes slideRightToLeft {
+.achievments-card.animate {
+    animation: slideLeftToRight 0.5s ease forwards;
+}
+
+/* Add delay to each card */
+.achievments-card:nth-child(1).animate {
+    animation-delay: 0s;
+}
+
+.achievments-card:nth-child(2).animate {
+    animation-delay: 0.5s;
+}
+
+.achievments-card:nth-child(3).animate {
+    animation-delay: 1s;
+}
+
+@keyframes slideLeftToRight {
     0% {
-        transform: translateX(100%);
+        transform: translateX(-100%);
         opacity: 0.3;
     }
     100% {

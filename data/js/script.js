@@ -2,7 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 2,
+        slidesPerView: 1.01,
+        reverseDirection: true,
         spaceBetween: 10,
         pagination: {
             el: '.swiper-pagination',
@@ -15,10 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
         autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+            delay: 0,
+            disableOnInteraction: true,
         },
-        loop: true,
+        speed: 2500, // Speed of the continuous slide (lower is faster)
+        loop: true, // Enable continuous loop mode
+        freeMode: true, 
+        freeModeMomentum: false,
     });
 });
 document.addEventListener('DOMContentLoaded', () => {
@@ -65,5 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         updateCount();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.achievments-card');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.style.transform = 'translateY(-5px)';
+        });
+
+        card.addEventListener('mouseout', () => {
+            card.style.transform = 'translateY(0)';
+        });
     });
 });

@@ -265,7 +265,36 @@ h1 {
     justify-content: center;
     align-items: center;
     text-align: center;
+  
 }
+
+.section-title1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    margin-top: 2rem; 
+  
+}
+
+.section-title2 {
+    display: flex; /* Ensure the div is using flexbox layout */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem; /* Add padding for both top/bottom and left/right */
+    margin: 2rem 0; /* Add some margin for larger screens */
+}
+
+@media (max-width: 750px) {
+    .section-title2 {
+        padding: 2rem 1rem;  /* Ensure the same padding for small screens */
+        margin: 4rem 0; /* Increase margin on top and bottom for small screens */
+    }
+}
+
+
 
 .section {
     display: flex;
@@ -531,7 +560,9 @@ h1 {
 }
 
 #partnerships {
-    height: 100vh ;
+    height: 100vh;
+    padding: 6rem 0 4rem 0; /* Add space at the top and bottom by increasing padding */
+    margin: 0 0 4rem 0; /* Initial bottom margin */
 }
 
 .partners-container {
@@ -541,10 +572,7 @@ h1 {
     flex-wrap: wrap;
     position: relative;
     min-height: 40vh; /* Adjusted to min-height to allow for content flexibility */
-    margin: 0; /* Ensure no margin outside the container */
-    padding: 0; 
 }
-
 
 .partner-cards {
     display: flex;
@@ -552,20 +580,25 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     margin-top: 2rem;
-    margin-bottom: 0; 
+    margin-bottom: 2rem;
+}
+
+/* Additional margin for small screens */
+@media (max-width: 750px) {
+    #partnerships {
+        padding: 6rem 0; /* Ensure padding remains at top and bottom */
+        margin: 4rem 0; /* Add top and bottom margin for small screens */
+    }
 }
 
 .partner-card img {
     height: 80px;
 }
-
 .achievments-cards {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0; /* Reset margin to remove any default margin */
-    padding: 0;
 }
 
 .achievments-card {
@@ -588,6 +621,16 @@ h1 {
 
 #achievements {
     height: 60vh;
+    padding: 6rem 0 4rem 0; /* Add space at the top by increasing top padding */
+    margin: 0 0 4rem 0; /* Initial bottom margin */
+}
+
+/* Additional margin for small screens */
+@media (max-width: 750px) {
+    #achievements {
+        padding: 6rem 0; /* Ensure padding remains at top and bottom */
+        margin: 4rem 0; /* Add top and bottom margin for small screens */
+    }
 }
 
 .achievments-card:hover {

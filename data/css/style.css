@@ -273,6 +273,7 @@ h1 {
     align-items: center;
     flex-direction: column;
 }
+
 #trending {
     height: 60vh;
     margin-top: 5%;
@@ -295,6 +296,12 @@ h1 {
     width: 325px !important;
     height: 200px !important;
     margin: 1rem !important;
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+    cursor: pointer;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px); /* Move slide slightly upward on hover */
 }
 
 @media screen and (max-width: 767px) {
@@ -331,6 +338,13 @@ h1 {
     width: 516px;
     height: 611px;
     background: #1c184a;
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+    cursor: pointer;
+}
+
+.showcase-vtp:hover {
+    transform: translateY(-5px); /* Move card slightly upward on hover */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px; /* Adjust box shadow on hover for depth */
 }
 
 .vtp-image {
@@ -376,6 +390,13 @@ h1 {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 0.5rem;
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+    cursor: pointer;
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px); /* Move card slightly upward on hover */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px; /* Adjust box shadow on hover for depth */
 }
 
 .showcase-card-img {
@@ -545,6 +566,8 @@ h1 {
     align-items: center;
     flex-direction: column;
     border-radius: 45px;
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+    cursor: pointer; 
 }
 
 .achievments-card img {
@@ -553,7 +576,14 @@ h1 {
 
 #achievements {
     height: 60vh;
+    padding: 4rem 0;
 }
+
+.achievments-card:hover {
+    transform: translateY(-5px); /* Move card slightly upward on hover */
+}
+
+
 
 #clients {
     height: 100vh;

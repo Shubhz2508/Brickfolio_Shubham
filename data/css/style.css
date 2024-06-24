@@ -338,12 +338,12 @@ h1 {
     width: 516px;
     height: 611px;
     background: #1c184a;
-    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+    transition: transform 0.3s ease ; /* Added transition for smooth hover effect */
     cursor: pointer;
 }
 
 .showcase-vtp:hover {
-    transform: translateY(-5px); /* Move card slightly upward on hover */
+    transform: translateY(-5px) scale(1.1); /* Move card slightly upward on hover */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px; /* Adjust box shadow on hover for depth */
 }
 
@@ -381,6 +381,8 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Include box-shadow for hover effect */
+    cursor: pointer;
 }
 
 .showcase-card {
@@ -390,12 +392,13 @@ h1 {
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 0.5rem;
-    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+    transition: transform 0.3s ease ; /* Added transition for smooth hover effect */
     cursor: pointer;
 }
 
+
 .showcase-card:hover {
-    transform: translateY(-5px); /* Move card slightly upward on hover */
+    transform: translateY(-5px) scale(1.1); /* Move card slightly upward on hover */
     box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px; /* Adjust box shadow on hover for depth */
 }
 
@@ -421,6 +424,8 @@ h1 {
 .showcase-card-content i {
     color: #000;
 }
+
+
 
 .specs {
     display: flex;
@@ -532,8 +537,7 @@ h1 {
     position: relative;
     min-height: 40vh; /* Adjusted to min-height to allow for content flexibility */
     margin: 0; /* Ensure no margin outside the container */
-    padding: 0; /
-   
+    padding: 0; 
 }
 
 
@@ -550,13 +554,13 @@ h1 {
     height: 80px;
 }
 
-
 .achievments-cards {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 0;
+    margin: 0; /* Reset margin to remove any default margin */
+    padding: 0; 
 }
 
 
@@ -571,7 +575,8 @@ h1 {
     flex-direction: column;
     border-radius: 45px;
     transition: transform 0.3s ease; /* Added transition for smooth hover effect */
-    cursor: pointer; 
+    cursor: pointer;
+    animation: slideRightToLeft 0.5s ease forwards;
 }
 
 .achievments-card img {
@@ -580,14 +585,22 @@ h1 {
 
 #achievements {
     height: 60vh;
-    padding: 4rem 0;
 }
 
 .achievments-card:hover {
     transform: translateY(-5px); /* Move card slightly upward on hover */
 }
 
-
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 #clients {
     height: 100vh;

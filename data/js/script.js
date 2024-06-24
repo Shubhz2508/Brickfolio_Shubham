@@ -111,3 +111,21 @@ $(document).ready(function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.achievments-card').forEach(function(card) {
+                    card.classList.add('animate');
+                });
+            } else {
+                document.querySelectorAll('.achievments-card').forEach(function(card) {
+                    card.classList.remove('animate');
+                });
+            }
+        });
+    });
+
+    observer.observe(document.querySelector('#achievements'));
+});
+

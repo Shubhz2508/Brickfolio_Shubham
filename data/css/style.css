@@ -410,6 +410,11 @@ h1 {
 .showcase-card-img img {
     width: 100%;
     height: 100%;
+    transition: transform 0.3s ease; /* Added transition for smooth scaling effect */
+}
+
+.showcase-card-img img.enlarged {
+    transform: scale(1.1); /* Increase size on click */
 }
 
 .showcase-card-content {

@@ -386,7 +386,7 @@ h1 {
 .showcase-card {
     width: 254px;
     height: 287px;
-    padding: 9px;
+    padding: 15px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin: 0.5rem;
@@ -521,7 +521,7 @@ h1 {
 }
 
 #partnerships {
-    height: 100vh !important;
+    height: 100vh ;
 }
 
 .partners-container {
@@ -542,7 +542,7 @@ h1 {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 0; 
 }
 
@@ -580,7 +580,7 @@ h1 {
 
 #achievements {
     height: 60vh;
-   
+    padding: 4rem 0;
 }
 
 .achievments-card:hover {
